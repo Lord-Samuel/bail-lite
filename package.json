@@ -1,5 +1,5 @@
 {
-  "name": "@bail-lite",
+  "name": "bail-lite",
   "version": "0.0.1",
   "description": "WhatsApp API for wa-api, a multi-device WhatsApp Web API client",
   "keywords": [
