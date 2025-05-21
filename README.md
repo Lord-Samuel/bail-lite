@@ -30,12 +30,12 @@ Here is an example you can use: [example.ts](Example/example.ts) or here is a tu
 
 Use the stable version:
 ```bash
-npm install @deathnaitsa/bail-lite
+npm install @bail-lite
 ```
 
 Then import your code using:
 ```javascript
-const { default: makeWASocket } = require("@deathnaitsa/baileys")
+const { default: makeWASocket } = require("@bail-lite")
 ```
 # Links
 
@@ -193,7 +193,7 @@ WhatsApp provides a multi-device API that allows Baileys to be authenticated as 
 > You can customize browser name if you connect with **QR-CODE**, with `Browser` constant, we have some browsers config, **see [here](https://baileys.whiskeysockets.io/types/BrowsersMap.html)**
 
 ```javascript
-const { default: makeWASocket } = require("@deathnaitsa/baileys")
+const { default: makeWASocket } = require("@bail-lite")
 
 
 const sock = makeWASocket({
@@ -214,7 +214,7 @@ If the connection is successful, you will see a QR code printed on your terminal
 The phone number can't have `+` or `()` or `-`, only numbers, you must provide country code
 
 ```javascript
-const { default: makeWASocket } = require("@deathnaitsa/baileys")
+const { default: makeWASocket } = require("@bail-lite")
 
 const sock = makeWASocket({
     // can provide additional config here
@@ -230,7 +230,7 @@ if (!sock.authState.creds.registered) {
 
 - Costum Pairing
 if (!sock.authState.creds.registered) {
-    const pair = "AB123C4D" // only 8 alphanumeric (no more or less)
+    const pair = "BAILLITE" // only 8 alphanumeric (no more or less)
     const number = 'XXXXXXXXXXX'
     const code = await sock.requestPairingCode(number, pair)
     console.log(code)
@@ -315,8 +315,8 @@ You obviously don't want to keep scanning the QR code every time you want to con
 
 So, you can load the credentials to log back in:
 ```javascript
-const makeWASocket = require("@deathnaitsa/baileys").default;
-const { useMultiFileAuthState } = require("@deathnaitsa/baileys");
+const makeWASocket = require("@bail-lite").default;
+const { useMultiFileAuthState } = require("@bail-lite");
 
 // enable authDebug to display session logs
 const { state, saveCreds } = await useMultiFileAuthState('auth_info_baileys', { authDebug: true })
@@ -331,8 +331,8 @@ sock.ev.on('creds.update', saveCreds)
 
 You can sync cache on MultiFileAuthState
 ```javascript
-const makeWASocket = require("@deathnaitsa/baileys").default;
-const { useMultiFileAuthState, makeCacheableSignalKeyStore } = require("@deathnaitsa/baileys");
+const makeWASocket = require("@bail-lite").default;
+const { useMultiFileAuthState, makeCacheableSignalKeyStore } = require("@bail-lite");
 
 // enable syncCache then fetch cache
 const { state, saveCreds, cache: authCache } = await useMultiFileAuthState('auth_info_baileys', { syncCache: true })
@@ -381,8 +381,8 @@ sock.ev.on('messages.upsert', ({ messages }) => {
 > This example includes basic auth storage too
 
 ```javascript
-const makeWASocket = require("@deathnaitsa/baileys").default;
-const { DisconnectReason, useMultiFileAuthState } = require("@deathnaitsa/baileys");
+const makeWASocket = require("@bail-lite").default;
+const { DisconnectReason, useMultiFileAuthState } = require("@bail-lite");
 const Boom = require('@hapi/boom');
 
 async function connectToWhatsApp () {
@@ -464,8 +464,8 @@ sock.ev.on('messages.update', event => {
 It can be used as follows:
 
 ```javascript
-const makeWASocket = require("@deathnaitsa/baileys").default;
-const { makeInMemoryStore } = require("@deathnaitsa/baileys");
+const makeWASocket = require("@bail-lite").default;
+const { makeInMemoryStore } = require("@bail-lite");
 // the store maintains the data of the WA connection in memory
 // can be written out to a file & read from it
 const store = makeInMemoryStore({ })
@@ -1226,7 +1226,7 @@ await sock.sendMessage(jid, {
 If you want to save the media you received
 ```javascript
 const { createWriteStream } = require('fs');
-const { downloadMediaMessage, getContentType } = require("@deathnaitsa/baileys");
+const { downloadMediaMessage, getContentType } = require("@bail-lite");
 
 sock.ev.on('messages.upsert', async ({ [m] }) => {
     if (!m.message) return // if there is no text or media message
