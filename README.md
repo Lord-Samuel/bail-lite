@@ -19,12 +19,6 @@ This project is provided **as-is** and should be used with **extreme caution**.
 
 **Use at your own discretion.** Respect platform rules, user boundaries, and stay within legal and moral lines.
 
-## Example
-
-Here is an example you can use: [example.ts](Example/example.ts) or here is a tutorial for running the Baileys WhatsApp API code
-1. ``` cd path/to/Baileys ```
-2. ``` npm install```
-3. ``` node example.js```
 
 ## Install
 
