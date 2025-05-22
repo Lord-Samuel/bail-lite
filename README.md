@@ -22,22 +22,27 @@ This project is provided **as-is** and should be used with **extreme caution**.
 
 ## Install
 
-Use the stable version:
 ```bash
 npm install bail-lite
 ```
 
+or
+
+```sh
+npm i bail-lite
+```
+
 Then import your code using:
-```javascript
+```js
 const { default: makeWASocket } = require("bail-lite")
 ```
-# Links
+# Official Links
 
-#### Official
 - [Discord](https://discord.gg/WeJM5FP9GG)
-- [Docs](https://guide.whiskeysockets.io/)
+- [Official Docs](https://guide.whiskeysockets.io/)
 
 
+<hr>
 
 # Index
 
@@ -107,6 +112,7 @@ const { default: makeWASocket } = require("bail-lite")
     - [Delete a Chat](#delete-a-chat)
     - [Star/Unstar a Message](#starunstar-a-message)
     - [Disappearing Messages](#disappearing-messages)
+    - [Add Ai Tag](#send-message-with-ai-watermark)
 - [User Querys](#user-querys)
     - [Check If ID Exists in Whatsapp](#check-if-id-exists-in-whatsapp)
     - [Query Chat History (groups too)](#query-chat-history-groups-too)
@@ -988,15 +994,6 @@ await sock.sendMessage(
 )
 ```
 
-#### Send With Ai WaterMark
-```javascript
-await sock.sendMessage(jid, {
-        text: "Message to Send", ai: true },
-  {
-    quoted : message
-  }
-)
-```
 
 #### Forward Messages
 - You need to have message object, can be retrieved from [store](#implementing-a-data-store) or use a [message](https://baileys.whiskeysockets.io/types/WAMessage.html) object
@@ -1398,8 +1395,8 @@ await sock.chatModify({
 
 - Ephemeral can be:
 
-| Time  | Seconds        |
-|-------|----------------|
+| Time   | Seconds    |
+|------- |------------|
 | Remove | 0          |
 | 24h    | 86.400     |
 | 7d     | 604.800    |
@@ -1424,6 +1421,20 @@ await sock.sendMessage(
     { disappearingMessagesInChat: false }
 )
 ```
+
+
+### Send Message With Ai WaterMark
+
+```javascript
+// Just add ai: true in text content
+await sock.sendMessage(jid, {
+        text: "Message to Send", ai: true },
+  {
+    quoted : message
+  }
+)
+```
+
 
 ## User Querys
 
@@ -1882,7 +1893,6 @@ The `'frame'` is what the message received is, it has three components:
 - `tag` -- what this frame is about (eg. message will have 'message')
 - `attrs` -- a string key-value pair with some metadata (contains ID of the message usually)
 - `content` -- the actual data (eg. a message node will have the actual message content in it)
-- read more about this format [here](/src/WABinary/readme.md)
 
 ### Register a Callback for Websocket Events
 
@@ -1900,5 +1910,6 @@ sock.ws.on('CB:edge_routing,id:abcd', (node: BinaryNode) => { })
 sock.ws.on('CB:edge_routing,id:abcd,routing_info', (node: BinaryNode) => { })
 ```
 
-> [!NOTE]
-> Also, this repo is now licenced under GPL 3 since it uses [libsignal-node](https://git.questbook.io/backend/service-coderunner/-/merge_requests/1)
+> [!Credits]
+>- [Lord-Samuel](https://github.com/Lord-Samuel)
+>- [Whiskeysockets/baileys](https://github.com/whiskeysockets/baileys)
