@@ -951,7 +951,7 @@ await sock.sendMessage(
     jid,
     {
         product: {
-            productImage: { url: "https://example.jpg }, //or buffer
+            productImage: { url: "https://example.jpg" }, //or buffer
             productImageCount: 1,
             title: "Title Product",
             description: "Description Product",
@@ -982,6 +982,16 @@ await sock.sendMessage(
              }
         ]
     },
+  {
+    quoted : message
+  }
+)
+```
+
+#### Send With Ai WaterMark
+```javascript
+await sock.sendMessage(jid, {
+        text: "Message to Send", ai: true },
   {
     quoted : message
   }
