@@ -1,4 +1,3 @@
-
 {
   "name": "bail-lite",
   "version": "0.0.4",
@@ -15,7 +14,7 @@
   ],
   "homepage": "https://github.com/Lord-Samuel/bail-lite",
   "repository": {
-    "url": "git@github.com:Lord-Samuel/bail-lite.git"
+    "url": "git+ssh://git@github.com/Lord-Samuel/bail-lite.git"
   },
   "license": "MIT",
   "author": "Lord-Samuel",
@@ -26,9 +25,7 @@
     "WAProto/*",
     "WASignalGroup/*.js"
   ],
-  "scripts": {
-   
-  },
+  "scripts": {},
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
     "@cacheable/node-cache": "^1.4.0",
