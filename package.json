@@ -1,6 +1,6 @@
 {
   "name": "bail-lite",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "WhatsApp API for wa-api, a multi-device WhatsApp Web API client",
   "keywords": [
     "whatsapp",
