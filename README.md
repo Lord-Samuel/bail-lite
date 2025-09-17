@@ -2,20 +2,25 @@
 
 <div align="center">
 
-<img src="https://wallpapers.com/images/hd/kiyotaka-ayanokoji-in-a-dark-room-a1w8t6bae428ddz3.jpg" alt="Header Image" width="100%"/>
+  <img src="https://wallpapers.com/images/hd/kiyotaka-ayanokoji-in-a-dark-room-a1w8t6bae428ddz3.jpg" alt="Header Image" width="100%"/>
 
-<br/>
-<hr>
-<!-- WhatsApp Links -->
-<p>
-  <a href="https://whatsapp.com/channel/0029Vb67k3mAInPdZ4l9R60f">
-    <img src="https://img.shields.io/badge/WhatsApp-Channel-brightgreen" alt="WA Channel"/>
-  </a>
-  <a href="https://wa.me/233245654110">
-    <img src="https://img.shields.io/badge/Owner-WA-green" alt="WA Owner"/>
-  </a>
-</p>
-<hr>
+  <br/>
+  <hr>
+  <!-- WhatsApp Links -->
+  <p>
+    <a href="https://whatsapp.com/channel/0029Vb67k3mAInPdZ4l9R60f"><img src="https://img.shields.io/badge/WhatsApp-Channel-brightgreen" alt="WA Channel"/></a>
+    <a href="https://wa.me/233245654110"><img src="https://img.shields.io/badge/Owner-WA-green" alt="WA Owner"/></a>
+  </p>
+  <hr>
+</div>
+
+<div align='center'>
+
+[![npm version](https://img.shields.io/npm/v/bail-lite?style=for-the-badge&color=00d26a&logo=npm&logoColor=white)](https://www.npmjs.com/package/bail-lite)
+[![Downloads](https://img.shields.io/npm/dm/bail-lite?style=for-the-badge&color=4285f4&logo=download&logoColor=white)](https://www.npmjs.com/package/bail-lite)
+[![GitHub stars](https://img.shields.io/github/stars/Lord-Samuel/bail-lite?style=for-the-badge&color=ffb400&logo=github&logoColor=white)](https://github.com/Lord-Samuel/Bail-lite/stargazers)
+[![License](https://img.shields.io/badge/License-MIT-e74c3c?style=for-the-badge&logo=gnu&logoColor=white)](https://www.gnu.org/licenses/MIT)
+
 </div>
 
 # Install
