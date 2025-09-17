@@ -27,7 +27,7 @@
 
 Use the stable version:
 ```
-yarn add bail-lite
+npm install bail-lite
 ```
 
 Use the edge version (no guarantee of stability, but latest fixes + features)
