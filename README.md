@@ -33,14 +33,14 @@ yarn add github: bail-lite
 Then import your code using:
 
 
-> ### MJS:
+> ### Es Modules (MJS):
 ```mjs 
 import makeWASocket from 'bail-lite'
 ```
 
-> ### CJS:
+> ### CommonJs (CJS):
 ```cjs
-const { defalt: makeWaSocket } = require('bail-lite')
+const { default: makeWaSocket } = require('bail-lite')
 ```
 
 # Index
@@ -2547,4 +2547,20 @@ sock.ws.on('CB:edge_routing,id:abcd,routing_info', (node: BinaryNode) => { })
 ```
 
 > [!NOTE]
-> This Repo Was Initialy Created For Fun. If There Any Errors Make An Issue.
+> This Project Was Initialy Created For Personal Use But Ended Up Sharing.
+
+---
+Support
+
+For issues and contributions:
+
+· Create GitHub issues for bug reports
+
+· Submit pull requests for improvements
+
+· Join the WhatsApp channel for updates
+
+
+---
+
+Note: This implementation is designed for educational purposes. Always comply with WhatsApp's Terms of Service and applicable laws when deploying WhatsApp API solutions.
