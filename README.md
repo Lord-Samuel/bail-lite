@@ -227,7 +227,7 @@ const sock = makeWASocket({
 if (!sock.authState.creds.registered) {
     const number = 'XXXXXXXXXXX'
     const pairCode = 'BAILLITE'  // You Can Add A Custom PairCode
-    const code = await sock.requestPairingCode(number) // or await sock.requestPairingCode(number, pairCode)
+    const code = await sock.requestPairingCode(number, pairCode) // or await sock.requestPairingCode(number, pairCode)
     console.log(code)
 }
 ```
