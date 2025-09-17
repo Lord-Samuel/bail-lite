@@ -14,15 +14,6 @@
   <hr>
 </div>
 
-<div align='center'>
-
-[![npm version](https://img.shields.io/npm/v/bail-lite?style=for-the-badge&color=00d26a&logo=npm&logoColor=white)](https://www.npmjs.com/package/bail-lite)
-[![Downloads](https://img.shields.io/npm/dm/bail-lite?style=for-the-badge&color=4285f4&logo=download&logoColor=white)](https://www.npmjs.com/package/bail-lite)
-[![GitHub stars](https://img.shields.io/github/stars/Lord-Samuel/bail-lite?style=for-the-badge&color=ffb400&logo=github&logoColor=white)](https://github.com/Lord-Samuel/Bail-lite/stargazers)
-[![License](https://img.shields.io/badge/License-MIT-e74c3c?style=for-the-badge&logo=gnu&logoColor=white)](https://www.gnu.org/licenses/MIT)
-
-</div>
-
 # Install
 
 Use the stable version:
