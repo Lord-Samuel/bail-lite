@@ -1,9 +1,10 @@
+import { ILogger } from '../Utils/logger'
 import { SignalKeyStoreWithTransaction } from '../Types'
 
 export declare class LIDMappingStore {
     private readonly keys
     private onWhatsAppFunc?
-    constructor(keys: SignalKeyStoreWithTransaction, onWhatsAppFunc?: (...jids: string[]) => Promise<{
+    constructor(keys: SignalKeyStoreWithTransaction, onWhatsAppFunc?: (...jids: string[], logger: ILogger ) => Promise<{
         jid: string
         exists: boolean
         lid: string
@@ -11,13 +12,9 @@ export declare class LIDMappingStore {
     /**
      * Store LID-PN mapping - USER LEVEL
      */
-    storeLIDPNMapping(lid: string, pn: string): Promise<void>
-    /**
-     * Store LID-PN mapping - USER LEVEL
-     */
     storeLIDPNMappings(pairs: {
-        lid: string
-        pn: string
+        lid: string;
+        pn: string;
     }[]): Promise<void>
     /**
      * Get LID for PN - Returns device-specific LID based on user mapping
@@ -27,4 +24,5 @@ export declare class LIDMappingStore {
      * Get PN for LID - USER LEVEL with device construction
      */
     getPNForLID(lid: string): Promise<string | null>
+
 }
